@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine Reminder@team turtle</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <style>
+        body {
+            background-image: url("{% static 'img/wbbackground.jpg' %}");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="header_line">
+    <div class="container">
+        <
+        <div class="left">
+            Our team
+            <div class="more">
+                <div class="moreItem">Phone number:041xxxxxxx</div>
+                <div class="moreItem">Facebook:xxxxxxx</div>
+                <div class="moreItem">Email:973510101@qq.com</div>
+            </div>
+        </div>
+
+
+        <div class="right">
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+
+<div class="header">
+    <h1>Team Turtle Medication Dispenser</h1>
+</div>
+<div class="card" style=" margin-left: 10%; margin-right:20%; padding-top: 50px; padding-bottom: 5px;">
+    <img class="picture" src="{% static 'img/team.jpg' %}" alt="My image">
+    <div class="card-body">
+        <h5 class="card-title">Project background</h5>
+        <p class="card-text">Some mini introduction to our product.</p>
+        <br>
+        <button class="btn btn-lg" data-toggle="modal" data-target="#popup_window">Look</button>
+
+
+        <div class="modal fade" id="popup_window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">
+                            Project Background
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        IoT-Based Medicine Reminder and Dispenser developed for Internet of things: Group Project
+                        Semester 2, 2022 at University of Western Australia. Team Members:
+                        <br>
+                        Nishan Devkar (23762917)
+                        <br>
+                        Charlie Hu (23217014)
+                        <br>
+                        Ame Liu (22910358)
+                        <br>
+                        Alexander Turner (23423442)
+                        <br>
+                        Feifan Wu (22951266)
+                        <br><br>
+                        For patients, caregivers, clinicians and family members, maintaining correct dosages and
+                        schedules may be a stressful and dangerous day-to-day challenge. Our project aims to help
+                        individuals adhere to medication treatments by eliminating the problem of forgetting timely
+                        medication intake which could lead to health risks that could have been easily avoided.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card" style="padding-top: 50px; padding-bottom: 5px;">
+    <img class="picture" ; src="{% static 'img/user guide.jpg' %}" alt="My image">
+    <div class="card-body">
+        <h5 class="card-title">User guide</h5>
+        <p class="card-text">Click here to view the user tutorial.</p>
+        <br>
+        <button class="btn btn-lg" data-toggle="modal" data-target="#popup_window2">Start</button>
+
+
+        <div class="modal fade" id="popup_window2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">
+                            User Guide
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <ol>
+                            <li>Turn on the dispenser</li>
+                            <li>Load the Dispenser with pills that are to be dispensed</li>
+                            <li>Go to the webpage: Medicine Reminder@team turtle</li>
+                            <li>If visiting for the first time, click on Register</li>
+                            <ol>
+                                <li>Enter your Username, Password, email</li>
+                                <li>Click on Register and wait for a few seconds</li>
+                            </ol>
+                            <li>Once Registered, Login to your account using the login details: username and password
+                            </li>
+                            <li>Click on Create Your Plan to create a new reminder schedule</li>
+                            <li>Enter the Medication Details, Number of Pills to dispense, Number of reminders per day
+                                and an Emergency Contact email for the patients safety
+                            </li>
+                            <li>
+                                Click on Save to set the reminder.
+                            </li>
+                            <li>Stay healthy,Take care and remember to take your pills!</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

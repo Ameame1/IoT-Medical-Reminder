@@ -1,0 +1,88 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.container_main {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #b9b4ae;
+    border-width: 5px;
+    width: 400px;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.header_line {
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header_line .left {
+    float: left;
+    color: #f7f7f7;
+}
+
+
+.header_line .right {
+    float: right;
+}
+
+.header_line .right a {
+    color: #f7f7f7;
+    line-height: 25px;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 45px;
+}
+
+.header {
+    text-align: center;
+    color: #f7f7f7;
+    font-size: 75px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.from_input {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.container .left .more {
+    display: none;
+    position: fixed;
+}
+
+.container .left:hover .more {
+    display: block;
+}
+
+.button {
+    float: right;
+    border-radius: 15px;
+}
+
+.container_main .form_submit {
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+    height: 10px;
+}
+
+.delete_button{
+    float: right;
+    border-radius: 15px;
+}
+
+.user_tag{
+    margin-right: 20px;
+    color: #f7f7f7;
+}
+

@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your plan</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <style>
+        body {
+            background-image: url("{% static 'img/wbbackground.jpg' %}");
+            background-size: cover;
+            background-attachment:fixed;
+        }
+    </style>
+</head>
+<body>
+<div class="header_line">
+    <div class="container">
+        <div class="left">
+            Our team
+            <div class="more">
+                <div class="moreItem">Phone number:041xxxxxxx</div>
+                <div class="moreItem">Facebook:xxxxxxx</div>
+                <div class="moreItem">973510101@qq.com</div>
+            </div>
+        </div>
+
+
+        <div class="right">
+            <div class="user_tag"><span>User: </span> {{ request.user }}</div>
+            <a href="/logout/">Log out</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+</div>
+<div class="header">
+    <h1>Your Plan</h1>
+</div>
+<div class="container_main" style="width: 900px">
+    <a href="/plan">
+        <button type="button" class="btn-block">Create your plan</button>
+    </a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Medication Details</th>
+            <th scope="col">Number of pills</th>
+            <th scope="col">Number of times per day</th>
+            <th scope="col">Scheduled time</th>
+            <th scope="col">Emergency Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for dic in user_plan %}
+            <tr>
+                <td>{{ dic.medicine_name }}</td>
+                <td>{{ dic.dosage }}</td>
+                <td>{{ dic.times }}</td>
+                <td>{{ dic.num_time }}</td>
+                <td>{{ dic.email }}</td>
+                <td><button class="btn delete_button" id="del" value="{{ dic.id }}" onclick="delete_plan()">Del</button></td>
+            </tr>
+            </tbody>
+        {% endfor %}
+    </table>
+
+
+</div>
+
+</body>
+</html>
